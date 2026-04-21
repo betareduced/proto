@@ -1,0 +1,37 @@
+edition = "2023";
+
+package example.kanban.task.v1;
+
+import "common/wkt/v1/record_timestamps.proto";
+
+option go_package = "github.com/betareduced/proto/go/example/kanban/task/v1;taskpb";
+
+service TaskService {
+  rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse);
+}
+
+enum Status {
+  BACKLOG = 0;
+  READY = 1;
+  DOING = 2;
+  REVIEW = 3;
+  DONE = 4;
+  ARCHIVED = 5;
+}
+
+message Task {
+  string id = 1;
+  string name = 2;
+  string desc = 3;
+  Status status = 4;
+  common.wkt.v1.RecordTimestamps timestamps = 5;
+}
+
+message CreateTaskRequest {
+  string name = 1;
+  string desc = 2;
+}
+
+message CreateTaskResponse {
+  Task task = 1;
+}

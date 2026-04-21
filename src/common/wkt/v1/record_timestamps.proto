@@ -1,0 +1,13 @@
+edition = "2023";
+
+package common.wkt.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/betareduced/proto/go/common/wkt/v1;wktpb";
+
+message RecordTimestamps {
+  google.protobuf.Timestamp created_at = 1;
+  google.protobuf.Timestamp updated_at = 2;
+  google.protobuf.Timestamp deleted_at = 3;
+}

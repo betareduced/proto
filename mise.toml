@@ -1,0 +1,18 @@
+[tools]
+buf = "1.68.2"
+go = "1.26.2"
+protoc-gen-go = "1.36.11"
+protoc-gen-go-grpc = "1.6.1"
+
+[tasks.tidy]
+run = [
+    "buf lint",
+    "buf format -w"
+]
+
+[tasks.gen]
+run = [
+    "buf generate",
+    "go -C go mod tidy"
+]
+depends = ["tidy"]
