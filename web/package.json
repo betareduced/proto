@@ -1,0 +1,50 @@
+{
+  "name": "@betareduced/proto-web",
+  "version": "0.1.0",
+  "description": "Generated Protobuf-ES and Connect-RPC sources for the betareduced proto schemas (web client).",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "common",
+    "example",
+    "tsconfig.json"
+  ],
+  "exports": {
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.11.0"
+  },
+  "peerDependencies": {
+    "@connectrpc/connect": "^2.1.1",
+    "@connectrpc/connect-web": "^2.1.1"
+  },
+  "peerDependenciesMeta": {
+    "@connectrpc/connect": { "optional": true },
+    "@connectrpc/connect-web": { "optional": true }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betareduced/proto.git",
+    "directory": "web"
+  },
+  "homepage": "https://github.com/betareduced/proto/tree/main/web",
+  "bugs": {
+    "url": "https://github.com/betareduced/proto/issues"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  }
+}

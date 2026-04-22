@@ -1,19 +1,56 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 java {
     version = 25
+    withSourcesJar()
 }
 
 group = 'com.betareduced.proto'
-version = '0.1.0-SNAPSHOT'
+version = project.findProperty('releaseVersion') ?: '0.1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
     maven {
         name = "buf"
         url = uri("https://buf.build/gen/maven")
+    }
+}
+
+publishing {
+    publications {
+        gpr(MavenPublication) {
+            artifactId = 'proto'
+            from components.java
+            pom {
+                name = 'proto'
+                description = 'Generated stubs for the betareduced proto schemas.'
+                url = 'https://github.com/betareduced/proto'
+                licenses {
+                    license {
+                        name = 'MIT'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+                scm {
+                    url = 'https://github.com/betareduced/proto'
+                    connection = 'scm:git:https://github.com/betareduced/proto.git'
+                    developerConnection = 'scm:git:git@github.com:betareduced/proto.git'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/betareduced/proto")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
 }
 

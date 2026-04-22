@@ -3,8 +3,12 @@ buf = "1.68.2"
 go = "1.26.2"
 gradle = "9.3.0"
 java = "25"
+node = "24"
 protoc-gen-go = "1.36.11"
 protoc-gen-go-grpc = "1.6.1"
+"npm:typescript" = "latest"
+"npm:@bufbuild/protoc-gen-es" = "latest"
+"npm:zx" = "latest"
 
 [tasks.tidy]
 run = [
@@ -18,3 +22,10 @@ run = [
     "go -C go mod tidy"
 ]
 depends = ["tidy"]
+
+[tasks.release]
+description = "Create go/v<ver>, java/v<ver>, web/<ver> tags and push to origin"
+usage = '''
+arg "<version>" help="Semver to release, e.g. 0.2.0 (a leading 'v' is stripped)"
+'''
+run = "zx scripts/release.mjs ${usage.version?}"

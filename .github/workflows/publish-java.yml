@@ -1,0 +1,54 @@
+name: Publish Java
+
+on:
+  push:
+    tags:
+      - 'java/**'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: java
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Resolve version from tag
+        id: version
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"           # e.g. java/v0.1.0 or java/0.1.0
+          raw="${tag#java/}"
+          version="${raw#v}"
+          if [ -z "$version" ]; then
+            echo "tag '$tag' did not yield a version" >&2
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Publishing Java version: $version"
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build
+        run: ./gradlew --no-daemon -PreleaseVersion=${{ steps.version.outputs.version }} build
+
+      - name: Publish to GitHub Packages
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew --no-daemon -PreleaseVersion=${{ steps.version.outputs.version }} publish

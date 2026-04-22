@@ -10,3 +10,7 @@ plugins:
     out: java/src/main/java
   - remote: buf.build/grpc/java:v1.80.0
     out: java/src/main/java
+  - local: protoc-gen-es
+    out: web
+    include_imports: true
+    opt: [target=ts, import_extension=ts]
