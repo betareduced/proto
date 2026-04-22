@@ -5,6 +5,8 @@ package example.kanban.task.v1;
 import "common/wkt/v1/record_timestamps.proto";
 
 option go_package = "github.com/betareduced/proto/go/example/kanban/task/v1;taskpb";
+option java_multiple_files = true;
+option java_package = "com.betareduced.proto.example.kanban.task.v1";
 
 service TaskService {
   rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse);

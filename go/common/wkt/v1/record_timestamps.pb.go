@@ -93,7 +93,8 @@ const file_common_wkt_v1_record_timestamps_proto_rawDesc = "" +
 	"\n" +
 	"updated_at\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAt\x129\n" +
 	"\n" +
-	"deleted_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\tdeletedAtB5Z3github.com/betareduced/proto/go/common/wkt/v1;wktpbb\beditionsp\xe8\a"
+	"deleted_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\tdeletedAtB\\\n" +
+	"#com.betareduced.proto.common.wkt.v1P\x01Z3github.com/betareduced/proto/go/common/wkt/v1;wktpbb\beditionsp\xe8\a"
 
 var (
 	file_common_wkt_v1_record_timestamps_proto_rawDescOnce sync.Once

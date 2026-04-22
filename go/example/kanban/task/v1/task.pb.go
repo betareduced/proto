@@ -280,7 +280,8 @@ const file_example_kanban_task_v1_task_proto_rawDesc = "" +
 	"\bARCHIVED\x10\x052r\n" +
 	"\vTaskService\x12c\n" +
 	"\n" +
-	"CreateTask\x12).example.kanban.task.v1.CreateTaskRequest\x1a*.example.kanban.task.v1.CreateTaskResponseB?Z=github.com/betareduced/proto/go/example/kanban/task/v1;taskpbb\beditionsp\xe8\a"
+	"CreateTask\x12).example.kanban.task.v1.CreateTaskRequest\x1a*.example.kanban.task.v1.CreateTaskResponseBo\n" +
+	",com.betareduced.proto.example.kanban.task.v1P\x01Z=github.com/betareduced/proto/go/example/kanban/task/v1;taskpbb\beditionsp\xe8\a"
 
 var (
 	file_example_kanban_task_v1_task_proto_rawDescOnce sync.Once

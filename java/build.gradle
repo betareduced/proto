@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+java {
+    version = 25
+}
+
+group = 'com.betareduced.proto'
+version = '0.1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "buf"
+        url = uri("https://buf.build/gen/maven")
+    }
+}
+
+dependencies {
+    implementation("io.grpc:grpc-core:1.80.0")
+    implementation("io.grpc:grpc-protobuf:1.80.0")
+    implementation("io.grpc:grpc-stub:1.80.0")
+    implementation("com.google.protobuf:protobuf-java:4.34.0")
+    implementation("io.grpc:grpc-netty-shaded:1.80.0")
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}
