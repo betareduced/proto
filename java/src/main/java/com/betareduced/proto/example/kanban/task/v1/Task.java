@@ -57,7 +57,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
    * @return The id.
    */
   @java.lang.Override
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
    * @return The bytes for id.
    */
   @java.lang.Override
@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return The name.
    */
   @java.lang.Override
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object desc_ = "";
   /**
-   * <code>string desc = 3 [json_name = "desc"];</code>
+   * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return Whether the desc field is set.
    */
   @java.lang.Override
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
-   * <code>string desc = 3 [json_name = "desc"];</code>
+   * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return The desc.
    */
   @java.lang.Override
@@ -176,7 +176,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string desc = 3 [json_name = "desc"];</code>
+   * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return The bytes for desc.
    */
   @java.lang.Override
@@ -197,21 +197,21 @@ private static final long serialVersionUID = 0L;
   public static final int STATUS_FIELD_NUMBER = 4;
   private int status_ = 0;
   /**
-   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
    * @return Whether the status field is set.
    */
   @java.lang.Override public boolean hasStatus() {
     return ((bitField0_ & 0x00000008) != 0);
   }
   /**
-   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
    * @return The enum numeric value on the wire for status.
    */
   @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
-   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
    * @return The status.
    */
   @java.lang.Override public com.betareduced.proto.example.kanban.task.v1.Status getStatus() {
@@ -680,14 +680,14 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
      * @return Whether the id field is set.
      */
     public boolean hasId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -703,7 +703,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -720,7 +720,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -733,7 +733,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
      */
@@ -759,14 +759,14 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -782,7 +782,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -799,7 +799,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -812,7 +812,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -822,7 +822,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -838,14 +838,14 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object desc_ = "";
     /**
-     * <code>string desc = 3 [json_name = "desc"];</code>
+     * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @return Whether the desc field is set.
      */
     public boolean hasDesc() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>string desc = 3 [json_name = "desc"];</code>
+     * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @return The desc.
      */
     public java.lang.String getDesc() {
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string desc = 3 [json_name = "desc"];</code>
+     * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @return The bytes for desc.
      */
     public com.google.protobuf.ByteString
@@ -878,7 +878,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string desc = 3 [json_name = "desc"];</code>
+     * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @param value The desc to set.
      * @return This builder for chaining.
      */
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string desc = 3 [json_name = "desc"];</code>
+     * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearDesc() {
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string desc = 3 [json_name = "desc"];</code>
+     * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @param value The bytes for desc to set.
      * @return This builder for chaining.
      */
@@ -917,21 +917,21 @@ private static final long serialVersionUID = 0L;
 
     private int status_ = 0;
     /**
-     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
      * @return Whether the status field is set.
      */
     @java.lang.Override public boolean hasStatus() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
      * @param value The enum numeric value on the wire for status to set.
      * @throws IllegalArgumentException if UNRECOGNIZED is provided.
      * @return This builder for chaining.
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
      * @return The status.
      */
     @java.lang.Override
@@ -952,7 +952,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.betareduced.proto.example.kanban.task.v1.Status.UNRECOGNIZED : result;
     }
     /**
-     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
      * @param value The status to set.
      * @return This builder for chaining.
      */
@@ -964,7 +964,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+     * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearStatus() {

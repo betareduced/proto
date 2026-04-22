@@ -11,17 +11,17 @@ public interface CreateTaskResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
    * @return Whether the task field is set.
    */
   boolean hasTask();
   /**
-   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
    * @return The task.
    */
   com.betareduced.proto.example.kanban.task.v1.Task getTask();
   /**
-   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
    */
   com.betareduced.proto.example.kanban.task.v1.TaskOrBuilder getTaskOrBuilder();
 }

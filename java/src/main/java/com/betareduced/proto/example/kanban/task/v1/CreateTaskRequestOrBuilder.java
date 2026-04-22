@@ -11,34 +11,34 @@ public interface CreateTaskRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string desc = 2 [json_name = "desc"];</code>
+   * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return Whether the desc field is set.
    */
   boolean hasDesc();
   /**
-   * <code>string desc = 2 [json_name = "desc"];</code>
+   * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return The desc.
    */
   java.lang.String getDesc();
   /**
-   * <code>string desc = 2 [json_name = "desc"];</code>
+   * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return The bytes for desc.
    */
   com.google.protobuf.ByteString

@@ -43,7 +43,7 @@ jobs:
         run: npm ci
 
       - name: Set package version
-        run: npm version --no-git-tag-version --allow-same-version "${{ steps.version.outputs.version }}"
+        run: npm pkg set version="${{ steps.version.outputs.version }}"
 
       - name: Build
         run: npm run build

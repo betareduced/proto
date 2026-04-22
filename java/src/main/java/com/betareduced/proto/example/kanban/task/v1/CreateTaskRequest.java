@@ -55,7 +55,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -63,7 +63,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return The name.
    */
   @java.lang.Override
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object desc_ = "";
   /**
-   * <code>string desc = 2 [json_name = "desc"];</code>
+   * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return Whether the desc field is set.
    */
   @java.lang.Override
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>string desc = 2 [json_name = "desc"];</code>
+   * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return The desc.
    */
   @java.lang.Override
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string desc = 2 [json_name = "desc"];</code>
+   * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return The bytes for desc.
    */
   @java.lang.Override
@@ -479,14 +479,14 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -542,7 +542,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -558,14 +558,14 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object desc_ = "";
     /**
-     * <code>string desc = 2 [json_name = "desc"];</code>
+     * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @return Whether the desc field is set.
      */
     public boolean hasDesc() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>string desc = 2 [json_name = "desc"];</code>
+     * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @return The desc.
      */
     public java.lang.String getDesc() {
@@ -581,7 +581,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string desc = 2 [json_name = "desc"];</code>
+     * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @return The bytes for desc.
      */
     public com.google.protobuf.ByteString
@@ -598,7 +598,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string desc = 2 [json_name = "desc"];</code>
+     * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @param value The desc to set.
      * @return This builder for chaining.
      */
@@ -611,7 +611,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string desc = 2 [json_name = "desc"];</code>
+     * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearDesc() {
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string desc = 2 [json_name = "desc"];</code>
+     * <code>string desc = 2 [json_name = "desc", (.buf.validate.field) = { ... }</code>
      * @param value The bytes for desc to set.
      * @return This builder for chaining.
      */

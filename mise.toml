@@ -24,8 +24,33 @@ run = [
 depends = ["tidy"]
 
 [tasks.release]
-description = "Create go/v<ver>, java/v<ver>, web/<ver> tags and push to origin"
 usage = '''
 arg "<version>" help="Semver to release, e.g. 0.2.0 (a leading 'v' is stripped)"
 '''
 run = "zx scripts/release.mjs ${usage_version?}"
+
+[tasks."verify:proto"]
+run = [
+    "buf lint",
+    "buf format --diff --exit-code",
+]
+
+[tasks."verify:go"]
+run = [
+    "go -C go build ./...",
+    "go -C go vet ./...",
+]
+
+[tasks."verify:java"]
+dir = "java"
+run = "./gradlew --no-daemon build"
+
+[tasks."verify:web"]
+dir = "web"
+run = [
+    "npm ci --silent",
+    "npm run build",
+]
+
+[tasks.verify]
+depends = ["verify:proto", "verify:go", "verify:java", "verify:web"]

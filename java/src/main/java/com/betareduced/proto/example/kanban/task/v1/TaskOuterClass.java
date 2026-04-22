@@ -51,28 +51,32 @@ public final class TaskOuterClass extends com.google.protobuf.GeneratedFile {
   static {
     java.lang.String[] descriptorData = {
       "\n!example/kanban/task/v1/task.proto\022\026exa" +
-      "mple.kanban.task.v1\032%common/wkt/v1/recor" +
-      "d_timestamps.proto\"\267\001\n\004Task\022\016\n\002id\030\001 \001(\tR" +
-      "\002id\022\022\n\004name\030\002 \001(\tR\004name\022\022\n\004desc\030\003 \001(\tR\004d" +
-      "esc\0226\n\006status\030\004 \001(\0162\036.example.kanban.tas" +
-      "k.v1.StatusR\006status\022?\n\ntimestamps\030\005 \001(\0132" +
-      "\037.common.wkt.v1.RecordTimestampsR\ntimest" +
-      "amps\";\n\021CreateTaskRequest\022\022\n\004name\030\001 \001(\tR" +
-      "\004name\022\022\n\004desc\030\002 \001(\tR\004desc\"F\n\022CreateTaskR" +
-      "esponse\0220\n\004task\030\001 \001(\0132\034.example.kanban.t" +
-      "ask.v1.TaskR\004task*O\n\006Status\022\013\n\007BACKLOG\020\000" +
-      "\022\t\n\005READY\020\001\022\t\n\005DOING\020\002\022\n\n\006REVIEW\020\003\022\010\n\004DO" +
-      "NE\020\004\022\014\n\010ARCHIVED\020\0052r\n\013TaskService\022c\n\nCre" +
-      "ateTask\022).example.kanban.task.v1.CreateT" +
-      "askRequest\032*.example.kanban.task.v1.Crea" +
-      "teTaskResponseBo\n,com.betareduced.proto." +
-      "example.kanban.task.v1P\001Z=github.com/bet" +
-      "areduced/proto/go/example/kanban/task/v1" +
-      ";taskpbb\010editionsp\350\007"
+      "mple.kanban.task.v1\032\033buf/validate/valida" +
+      "te.proto\032%common/wkt/v1/record_timestamp" +
+      "s.proto\"\341\001\n\004Task\022\030\n\002id\030\001 \001(\tB\010\272H\005r\003\260\001\001R\002" +
+      "id\022\036\n\004name\030\002 \001(\tB\n\272H\007r\005\020\001\030\310\001R\004name\022\034\n\004de" +
+      "sc\030\003 \001(\tB\010\272H\005r\003\030\240\037R\004desc\022@\n\006status\030\004 \001(\016" +
+      "2\036.example.kanban.task.v1.StatusB\010\272H\005\202\001\002" +
+      "\020\001R\006status\022?\n\ntimestamps\030\005 \001(\0132\037.common." +
+      "wkt.v1.RecordTimestampsR\ntimestamps\"Q\n\021C" +
+      "reateTaskRequest\022\036\n\004name\030\001 \001(\tB\n\272H\007r\005\020\001\030" +
+      "\310\001R\004name\022\034\n\004desc\030\002 \001(\tB\010\272H\005r\003\030\240\037R\004desc\"N" +
+      "\n\022CreateTaskResponse\0228\n\004task\030\001 \001(\0132\034.exa" +
+      "mple.kanban.task.v1.TaskB\006\272H\003\310\001\001R\004task*O" +
+      "\n\006Status\022\013\n\007BACKLOG\020\000\022\t\n\005READY\020\001\022\t\n\005DOIN" +
+      "G\020\002\022\n\n\006REVIEW\020\003\022\010\n\004DONE\020\004\022\014\n\010ARCHIVED\020\0052" +
+      "r\n\013TaskService\022c\n\nCreateTask\022).example.k" +
+      "anban.task.v1.CreateTaskRequest\032*.exampl" +
+      "e.kanban.task.v1.CreateTaskResponseBo\n,c" +
+      "om.betareduced.proto.example.kanban.task" +
+      ".v1P\001Z=github.com/betareduced/proto/go/e" +
+      "xample/kanban/task/v1;taskpbb\010editionsp\350" +
+      "\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          build.buf.validate.ValidateProto.getDescriptor(),
           com.betareduced.proto.common.wkt.v1.RecordTimestampsOuterClass.getDescriptor(),
         });
     internal_static_example_kanban_task_v1_Task_descriptor =
@@ -94,7 +98,13 @@ public final class TaskOuterClass extends com.google.protobuf.GeneratedFile {
         internal_static_example_kanban_task_v1_CreateTaskResponse_descriptor,
         new java.lang.String[] { "Task", });
     descriptor.resolveAllFeaturesImmutable();
+    build.buf.validate.ValidateProto.getDescriptor();
     com.betareduced.proto.common.wkt.v1.RecordTimestampsOuterClass.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(build.buf.validate.ValidateProto.field);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

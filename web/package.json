@@ -1,7 +1,6 @@
 {
   "name": "@betareduced/proto-web",
-  "version": "0.1.0",
-  "description": "Generated Protobuf-ES and Connect-RPC sources for the betareduced proto schemas (web client).",
+  "description": "Generated Protobuf-ES and Connect-RPC sources for the betareduced proto schemas (web client). Version is injected at release time from the git tag (web/<version>).",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -27,12 +26,20 @@
     "@bufbuild/protobuf": "^2.11.0"
   },
   "peerDependencies": {
+    "@bufbuild/protovalidate": "^1.1.1",
     "@connectrpc/connect": "^2.1.1",
     "@connectrpc/connect-web": "^2.1.1"
   },
   "peerDependenciesMeta": {
-    "@connectrpc/connect": { "optional": true },
-    "@connectrpc/connect-web": { "optional": true }
+    "@bufbuild/protovalidate": {
+      "optional": true
+    },
+    "@connectrpc/connect": {
+      "optional": true
+    },
+    "@connectrpc/connect-web": {
+      "optional": true
+    }
   },
   "repository": {
     "type": "git",

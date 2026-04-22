@@ -60,6 +60,7 @@ dependencies {
     implementation("io.grpc:grpc-stub:1.80.0")
     implementation("com.google.protobuf:protobuf-java:4.34.0")
     implementation("io.grpc:grpc-netty-shaded:1.80.0")
+    implementation("build.buf:protovalidate:1.1.2")
     testImplementation platform('org.junit:junit-bom:6.0.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

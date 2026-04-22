@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   public static final int TASK_FIELD_NUMBER = 1;
   private com.betareduced.proto.example.kanban.task.v1.Task task_;
   /**
-   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
    * @return Whether the task field is set.
    */
   @java.lang.Override
@@ -60,7 +60,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
    * @return The task.
    */
   @java.lang.Override
@@ -68,7 +68,7 @@ private static final long serialVersionUID = 0L;
     return task_ == null ? com.betareduced.proto.example.kanban.task.v1.Task.getDefaultInstance() : task_;
   }
   /**
-   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+   * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
    */
   @java.lang.Override
   public com.betareduced.proto.example.kanban.task.v1.TaskOrBuilder getTaskOrBuilder() {
@@ -394,14 +394,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.betareduced.proto.example.kanban.task.v1.Task, com.betareduced.proto.example.kanban.task.v1.Task.Builder, com.betareduced.proto.example.kanban.task.v1.TaskOrBuilder> taskBuilder_;
     /**
-     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
      * @return Whether the task field is set.
      */
     public boolean hasTask() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
      * @return The task.
      */
     public com.betareduced.proto.example.kanban.task.v1.Task getTask() {
@@ -412,7 +412,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
      */
     public Builder setTask(com.betareduced.proto.example.kanban.task.v1.Task value) {
       if (taskBuilder_ == null) {
@@ -428,7 +428,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
      */
     public Builder setTask(
         com.betareduced.proto.example.kanban.task.v1.Task.Builder builderForValue) {
@@ -442,7 +442,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
      */
     public Builder mergeTask(com.betareduced.proto.example.kanban.task.v1.Task value) {
       if (taskBuilder_ == null) {
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
      */
     public Builder clearTask() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
      */
     public com.betareduced.proto.example.kanban.task.v1.Task.Builder getTaskBuilder() {
       bitField0_ |= 0x00000001;
@@ -484,7 +484,7 @@ private static final long serialVersionUID = 0L;
       return internalGetTaskFieldBuilder().getBuilder();
     }
     /**
-     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
      */
     public com.betareduced.proto.example.kanban.task.v1.TaskOrBuilder getTaskOrBuilder() {
       if (taskBuilder_ != null) {
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task"];</code>
+     * <code>.example.kanban.task.v1.Task task = 1 [json_name = "task", (.buf.validate.field) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         com.betareduced.proto.example.kanban.task.v1.Task, com.betareduced.proto.example.kanban.task.v1.Task.Builder, com.betareduced.proto.example.kanban.task.v1.TaskOrBuilder> 

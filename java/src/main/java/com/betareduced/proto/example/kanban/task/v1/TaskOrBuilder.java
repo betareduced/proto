@@ -11,68 +11,68 @@ public interface TaskOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", (.buf.validate.field) = { ... }</code>
    * @return The bytes for id.
    */
   com.google.protobuf.ByteString
       getIdBytes();
 
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 2 [json_name = "name", (.buf.validate.field) = { ... }</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string desc = 3 [json_name = "desc"];</code>
+   * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return Whether the desc field is set.
    */
   boolean hasDesc();
   /**
-   * <code>string desc = 3 [json_name = "desc"];</code>
+   * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return The desc.
    */
   java.lang.String getDesc();
   /**
-   * <code>string desc = 3 [json_name = "desc"];</code>
+   * <code>string desc = 3 [json_name = "desc", (.buf.validate.field) = { ... }</code>
    * @return The bytes for desc.
    */
   com.google.protobuf.ByteString
       getDescBytes();
 
   /**
-   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
    * @return Whether the status field is set.
    */
   boolean hasStatus();
   /**
-   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
    * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
-   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status"];</code>
+   * <code>.example.kanban.task.v1.Status status = 4 [json_name = "status", (.buf.validate.field) = { ... }</code>
    * @return The status.
    */
   com.betareduced.proto.example.kanban.task.v1.Status getStatus();

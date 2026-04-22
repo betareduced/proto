@@ -7,6 +7,7 @@
 package taskpb
 
 import (
+	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
 	v1 "github.com/betareduced/proto/go/common/wkt/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -256,20 +257,22 @@ var File_example_kanban_task_v1_task_proto protoreflect.FileDescriptor
 
 const file_example_kanban_task_v1_task_proto_rawDesc = "" +
 	"\n" +
-	"!example/kanban/task/v1/task.proto\x12\x16example.kanban.task.v1\x1a%common/wkt/v1/record_timestamps.proto\"\xb7\x01\n" +
-	"\x04Task\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
-	"\x04name\x18\x02 \x01(\tR\x04name\x12\x12\n" +
-	"\x04desc\x18\x03 \x01(\tR\x04desc\x126\n" +
-	"\x06status\x18\x04 \x01(\x0e2\x1e.example.kanban.task.v1.StatusR\x06status\x12?\n" +
+	"!example/kanban/task/v1/task.proto\x12\x16example.kanban.task.v1\x1a\x1bbuf/validate/validate.proto\x1a%common/wkt/v1/record_timestamps.proto\"\xe1\x01\n" +
+	"\x04Task\x12\x18\n" +
+	"\x02id\x18\x01 \x01(\tB\b\xbaH\x05r\x03\xb0\x01\x01R\x02id\x12\x1e\n" +
+	"\x04name\x18\x02 \x01(\tB\n" +
+	"\xbaH\ar\x05\x10\x01\x18\xc8\x01R\x04name\x12\x1c\n" +
+	"\x04desc\x18\x03 \x01(\tB\b\xbaH\x05r\x03\x18\xa0\x1fR\x04desc\x12@\n" +
+	"\x06status\x18\x04 \x01(\x0e2\x1e.example.kanban.task.v1.StatusB\b\xbaH\x05\x82\x01\x02\x10\x01R\x06status\x12?\n" +
 	"\n" +
 	"timestamps\x18\x05 \x01(\v2\x1f.common.wkt.v1.RecordTimestampsR\n" +
-	"timestamps\";\n" +
-	"\x11CreateTaskRequest\x12\x12\n" +
-	"\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n" +
-	"\x04desc\x18\x02 \x01(\tR\x04desc\"F\n" +
-	"\x12CreateTaskResponse\x120\n" +
-	"\x04task\x18\x01 \x01(\v2\x1c.example.kanban.task.v1.TaskR\x04task*O\n" +
+	"timestamps\"Q\n" +
+	"\x11CreateTaskRequest\x12\x1e\n" +
+	"\x04name\x18\x01 \x01(\tB\n" +
+	"\xbaH\ar\x05\x10\x01\x18\xc8\x01R\x04name\x12\x1c\n" +
+	"\x04desc\x18\x02 \x01(\tB\b\xbaH\x05r\x03\x18\xa0\x1fR\x04desc\"N\n" +
+	"\x12CreateTaskResponse\x128\n" +
+	"\x04task\x18\x01 \x01(\v2\x1c.example.kanban.task.v1.TaskB\x06\xbaH\x03\xc8\x01\x01R\x04task*O\n" +
 	"\x06Status\x12\v\n" +
 	"\aBACKLOG\x10\x00\x12\t\n" +
 	"\x05READY\x10\x01\x12\t\n" +
