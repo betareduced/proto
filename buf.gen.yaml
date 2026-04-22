@@ -6,6 +6,9 @@ plugins:
   - local: protoc-gen-go-grpc
     out: go
     opt: [paths=source_relative, require_unimplemented_servers=false]
+  - local: protoc-gen-connect-go
+    out: go
+    opt: [paths=source_relative]
   - remote: buf.build/protocolbuffers/java:v34.1
     out: java/src/main/java
   - remote: buf.build/grpc/java:v1.80.0
