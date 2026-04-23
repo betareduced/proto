@@ -11,17 +11,12 @@ public interface GetTaskRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return Whether the id field is set.
-   */
-  boolean hasId();
-  /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", features = { ... }</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", features = { ... }</code>
    * @return The bytes for id.
    */
   com.google.protobuf.ByteString

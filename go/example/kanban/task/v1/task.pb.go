@@ -233,7 +233,7 @@ func (x *ListTaskResponse) GetContent() []*Task {
 
 type GetTaskRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            *string                `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -269,8 +269,8 @@ func (*GetTaskRequest) Descriptor() ([]byte, []int) {
 }
 
 func (x *GetTaskRequest) GetId() string {
-	if x != nil && x.Id != nil {
-		return *x.Id
+	if x != nil {
+		return x.Id
 	}
 	return ""
 }
@@ -551,9 +551,9 @@ const file_example_kanban_task_v1_task_proto_rawDesc = "" +
 	"\x0eUPDATED_AT_ASC\x10\x02\x12\x13\n" +
 	"\x0fUPDATED_AT_DESC\x10\x03\"J\n" +
 	"\x10ListTaskResponse\x126\n" +
-	"\acontent\x18\x01 \x03(\v2\x1c.example.kanban.task.v1.TaskR\acontent\" \n" +
-	"\x0eGetTaskRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id\"C\n" +
+	"\acontent\x18\x01 \x03(\v2\x1c.example.kanban.task.v1.TaskR\acontent\"'\n" +
+	"\x0eGetTaskRequest\x12\x15\n" +
+	"\x02id\x18\x01 \x01(\tB\x05\xaa\x01\x02\b\x02R\x02id\"C\n" +
 	"\x0fGetTaskResponse\x120\n" +
 	"\x04task\x18\x01 \x01(\v2\x1c.example.kanban.task.v1.TaskR\x04task\"\xe1\x01\n" +
 	"\x04Task\x12\x18\n" +

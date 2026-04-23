@@ -89,36 +89,36 @@ public final class TaskOuterClass extends com.google.protobuf.GeneratedFile {
       "\n\016CREATED_AT_ASC\020\000\022\023\n\017CREATED_AT_DESC\020\001\022" +
       "\022\n\016UPDATED_AT_ASC\020\002\022\023\n\017UPDATED_AT_DESC\020\003" +
       "\"J\n\020ListTaskResponse\0226\n\007content\030\001 \003(\0132\034." +
-      "example.kanban.task.v1.TaskR\007content\" \n\016" +
-      "GetTaskRequest\022\016\n\002id\030\001 \001(\tR\002id\"C\n\017GetTas" +
-      "kResponse\0220\n\004task\030\001 \001(\0132\034.example.kanban" +
-      ".task.v1.TaskR\004task\"\341\001\n\004Task\022\030\n\002id\030\001 \001(\t" +
-      "B\010\272H\005r\003\260\001\001R\002id\022\036\n\004name\030\002 \001(\tB\n\272H\007r\005\020\001\030\310\001" +
-      "R\004name\022\034\n\004desc\030\003 \001(\tB\010\272H\005r\003\030\240\037R\004desc\022@\n\006" +
-      "status\030\004 \001(\0162\036.example.kanban.task.v1.St" +
-      "atusB\010\272H\005\202\001\002\020\001R\006status\022?\n\ntimestamps\030\005 \001" +
-      "(\0132\037.common.wkt.v1.RecordTimestampsR\ntim" +
-      "estamps\"a\n\021CreateTaskRequest\022.\n\004name\030\001 \001" +
-      "(\tB\032\222A\rJ\013\"Your Todo\"\272H\007r\005\020\001\030\310\001R\004name\022\034\n\004" +
-      "desc\030\002 \001(\tB\010\272H\005r\003\030\240\037R\004desc\"N\n\022CreateTask" +
-      "Response\0228\n\004task\030\001 \001(\0132\034.example.kanban." +
-      "task.v1.TaskB\006\272H\003\310\001\001R\004task*O\n\006Status\022\013\n\007" +
-      "BACKLOG\020\000\022\t\n\005READY\020\001\022\t\n\005DOING\020\002\022\n\n\006REVIE" +
-      "W\020\003\022\010\n\004DONE\020\004\022\014\n\010ARCHIVED\020\0052\235\003\n\013TaskServ" +
-      "ice\022\210\001\n\nCreateTask\022).example.kanban.task" +
-      ".v1.CreateTaskRequest\032*.example.kanban.t" +
-      "ask.v1.CreateTaskResponse\"#\202\323\344\223\002\035\"\030/exam" +
-      "ple/kanban/v1/tasks:\001*\022\201\001\n\007GetTask\022&.exa" +
-      "mple.kanban.task.v1.GetTaskRequest\032\'.exa" +
-      "mple.kanban.task.v1.GetTaskResponse\"%\202\323\344" +
-      "\223\002\037\022\035/example/kanban/v1/tasks/{id}\022\177\n\010Li" +
-      "stTask\022\'.example.kanban.task.v1.ListTask" +
-      "Request\032(.example.kanban.task.v1.ListTas" +
-      "kResponse\" \202\323\344\223\002\032\022\030/example/kanban/v1/ta" +
-      "sksBo\n,com.betareduced.proto.example.kan" +
-      "ban.task.v1P\001Z=github.com/betareduced/pr" +
-      "oto/go/example/kanban/task/v1;taskpbb\010ed" +
-      "itionsp\350\007"
+      "example.kanban.task.v1.TaskR\007content\"\'\n\016" +
+      "GetTaskRequest\022\025\n\002id\030\001 \001(\tB\005\252\001\002\010\002R\002id\"C\n" +
+      "\017GetTaskResponse\0220\n\004task\030\001 \001(\0132\034.example" +
+      ".kanban.task.v1.TaskR\004task\"\341\001\n\004Task\022\030\n\002i" +
+      "d\030\001 \001(\tB\010\272H\005r\003\260\001\001R\002id\022\036\n\004name\030\002 \001(\tB\n\272H\007" +
+      "r\005\020\001\030\310\001R\004name\022\034\n\004desc\030\003 \001(\tB\010\272H\005r\003\030\240\037R\004d" +
+      "esc\022@\n\006status\030\004 \001(\0162\036.example.kanban.tas" +
+      "k.v1.StatusB\010\272H\005\202\001\002\020\001R\006status\022?\n\ntimesta" +
+      "mps\030\005 \001(\0132\037.common.wkt.v1.RecordTimestam" +
+      "psR\ntimestamps\"a\n\021CreateTaskRequest\022.\n\004n" +
+      "ame\030\001 \001(\tB\032\222A\rJ\013\"Your Todo\"\272H\007r\005\020\001\030\310\001R\004n" +
+      "ame\022\034\n\004desc\030\002 \001(\tB\010\272H\005r\003\030\240\037R\004desc\"N\n\022Cre" +
+      "ateTaskResponse\0228\n\004task\030\001 \001(\0132\034.example." +
+      "kanban.task.v1.TaskB\006\272H\003\310\001\001R\004task*O\n\006Sta" +
+      "tus\022\013\n\007BACKLOG\020\000\022\t\n\005READY\020\001\022\t\n\005DOING\020\002\022\n" +
+      "\n\006REVIEW\020\003\022\010\n\004DONE\020\004\022\014\n\010ARCHIVED\020\0052\235\003\n\013T" +
+      "askService\022\210\001\n\nCreateTask\022).example.kanb" +
+      "an.task.v1.CreateTaskRequest\032*.example.k" +
+      "anban.task.v1.CreateTaskResponse\"#\202\323\344\223\002\035" +
+      "\"\030/example/kanban/v1/tasks:\001*\022\201\001\n\007GetTas" +
+      "k\022&.example.kanban.task.v1.GetTaskReques" +
+      "t\032\'.example.kanban.task.v1.GetTaskRespon" +
+      "se\"%\202\323\344\223\002\037\022\035/example/kanban/v1/tasks/{id" +
+      "}\022\177\n\010ListTask\022\'.example.kanban.task.v1.L" +
+      "istTaskRequest\032(.example.kanban.task.v1." +
+      "ListTaskResponse\" \202\323\344\223\002\032\022\030/example/kanba" +
+      "n/v1/tasksBo\n,com.betareduced.proto.exam" +
+      "ple.kanban.task.v1P\001Z=github.com/betared" +
+      "uced/proto/go/example/kanban/task/v1;tas" +
+      "kpbb\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

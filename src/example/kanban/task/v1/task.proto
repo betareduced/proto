@@ -54,7 +54,7 @@ enum Status {
 }
 
 message GetTaskRequest {
-  string id = 1;
+  string id = 1 [features.field_presence = IMPLICIT];
 }
 
 message GetTaskResponse {

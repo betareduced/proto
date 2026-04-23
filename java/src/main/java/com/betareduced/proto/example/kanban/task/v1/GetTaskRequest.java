@@ -49,20 +49,11 @@ private static final long serialVersionUID = 0L;
             com.betareduced.proto.example.kanban.task.v1.GetTaskRequest.class, com.betareduced.proto.example.kanban.task.v1.GetTaskRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return Whether the id field is set.
-   */
-  @java.lang.Override
-  public boolean hasId() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", features = { ... }</code>
    * @return The id.
    */
   @java.lang.Override
@@ -79,7 +70,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string id = 1 [json_name = "id"];</code>
+   * <code>string id = 1 [json_name = "id", features = { ... }</code>
    * @return The bytes for id.
    */
   @java.lang.Override
@@ -111,7 +102,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
     }
     getUnknownFields().writeTo(output);
@@ -123,7 +114,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
     }
     size += getUnknownFields().getSerializedSize();
@@ -141,11 +132,8 @@ private static final long serialVersionUID = 0L;
     }
     com.betareduced.proto.example.kanban.task.v1.GetTaskRequest other = (com.betareduced.proto.example.kanban.task.v1.GetTaskRequest) obj;
 
-    if (hasId() != other.hasId()) return false;
-    if (hasId()) {
-      if (!getId()
-          .equals(other.getId())) return false;
-    }
+    if (!getId()
+        .equals(other.getId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -157,10 +145,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasId()) {
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-    }
+    hash = (37 * hash) + ID_FIELD_NUMBER;
+    hash = (53 * hash) + getId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -326,12 +312,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.betareduced.proto.example.kanban.task.v1.GetTaskRequest result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.id_ = id_;
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -346,7 +329,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.betareduced.proto.example.kanban.task.v1.GetTaskRequest other) {
       if (other == com.betareduced.proto.example.kanban.task.v1.GetTaskRequest.getDefaultInstance()) return this;
-      if (other.hasId()) {
+      if (!other.getId().isEmpty()) {
         id_ = other.id_;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -401,14 +384,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return Whether the id field is set.
-     */
-    public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", features = { ... }</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -424,7 +400,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", features = { ... }</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -441,7 +417,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", features = { ... }</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -454,7 +430,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", features = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -464,7 +440,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", features = { ... }</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
      */
