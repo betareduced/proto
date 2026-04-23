@@ -37,12 +37,15 @@ const (
 	TaskServiceCreateTaskProcedure = "/example.kanban.task.v1.TaskService/CreateTask"
 	// TaskServiceGetTaskProcedure is the fully-qualified name of the TaskService's GetTask RPC.
 	TaskServiceGetTaskProcedure = "/example.kanban.task.v1.TaskService/GetTask"
+	// TaskServiceListTaskProcedure is the fully-qualified name of the TaskService's ListTask RPC.
+	TaskServiceListTaskProcedure = "/example.kanban.task.v1.TaskService/ListTask"
 )
 
 // TaskServiceClient is a client for the example.kanban.task.v1.TaskService service.
 type TaskServiceClient interface {
 	CreateTask(context.Context, *connect.Request[v1.CreateTaskRequest]) (*connect.Response[v1.CreateTaskResponse], error)
 	GetTask(context.Context, *connect.Request[v1.GetTaskRequest]) (*connect.Response[v1.GetTaskResponse], error)
+	ListTask(context.Context, *connect.Request[v1.ListTaskRequest]) (*connect.Response[v1.ListTaskResponse], error)
 }
 
 // NewTaskServiceClient constructs a client for the example.kanban.task.v1.TaskService service. By
@@ -68,6 +71,12 @@ func NewTaskServiceClient(httpClient connect.HTTPClient, baseURL string, opts ..
 			connect.WithSchema(taskServiceMethods.ByName("GetTask")),
 			connect.WithClientOptions(opts...),
 		),
+		listTask: connect.NewClient[v1.ListTaskRequest, v1.ListTaskResponse](
+			httpClient,
+			baseURL+TaskServiceListTaskProcedure,
+			connect.WithSchema(taskServiceMethods.ByName("ListTask")),
+			connect.WithClientOptions(opts...),
+		),
 	}
 }
 
@@ -75,6 +84,7 @@ func NewTaskServiceClient(httpClient connect.HTTPClient, baseURL string, opts ..
 type taskServiceClient struct {
 	createTask *connect.Client[v1.CreateTaskRequest, v1.CreateTaskResponse]
 	getTask    *connect.Client[v1.GetTaskRequest, v1.GetTaskResponse]
+	listTask   *connect.Client[v1.ListTaskRequest, v1.ListTaskResponse]
 }
 
 // CreateTask calls example.kanban.task.v1.TaskService.CreateTask.
@@ -87,10 +97,16 @@ func (c *taskServiceClient) GetTask(ctx context.Context, req *connect.Request[v1
 	return c.getTask.CallUnary(ctx, req)
 }
 
+// ListTask calls example.kanban.task.v1.TaskService.ListTask.
+func (c *taskServiceClient) ListTask(ctx context.Context, req *connect.Request[v1.ListTaskRequest]) (*connect.Response[v1.ListTaskResponse], error) {
+	return c.listTask.CallUnary(ctx, req)
+}
+
 // TaskServiceHandler is an implementation of the example.kanban.task.v1.TaskService service.
 type TaskServiceHandler interface {
 	CreateTask(context.Context, *connect.Request[v1.CreateTaskRequest]) (*connect.Response[v1.CreateTaskResponse], error)
 	GetTask(context.Context, *connect.Request[v1.GetTaskRequest]) (*connect.Response[v1.GetTaskResponse], error)
+	ListTask(context.Context, *connect.Request[v1.ListTaskRequest]) (*connect.Response[v1.ListTaskResponse], error)
 }
 
 // NewTaskServiceHandler builds an HTTP handler from the service implementation. It returns the path
@@ -112,12 +128,20 @@ func NewTaskServiceHandler(svc TaskServiceHandler, opts ...connect.HandlerOption
 		connect.WithSchema(taskServiceMethods.ByName("GetTask")),
 		connect.WithHandlerOptions(opts...),
 	)
+	taskServiceListTaskHandler := connect.NewUnaryHandler(
+		TaskServiceListTaskProcedure,
+		svc.ListTask,
+		connect.WithSchema(taskServiceMethods.ByName("ListTask")),
+		connect.WithHandlerOptions(opts...),
+	)
 	return "/example.kanban.task.v1.TaskService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		switch r.URL.Path {
 		case TaskServiceCreateTaskProcedure:
 			taskServiceCreateTaskHandler.ServeHTTP(w, r)
 		case TaskServiceGetTaskProcedure:
 			taskServiceGetTaskHandler.ServeHTTP(w, r)
+		case TaskServiceListTaskProcedure:
+			taskServiceListTaskHandler.ServeHTTP(w, r)
 		default:
 			http.NotFound(w, r)
 		}
@@ -133,4 +157,8 @@ func (UnimplementedTaskServiceHandler) CreateTask(context.Context, *connect.Requ
 
 func (UnimplementedTaskServiceHandler) GetTask(context.Context, *connect.Request[v1.GetTaskRequest]) (*connect.Response[v1.GetTaskResponse], error) {
 	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("example.kanban.task.v1.TaskService.GetTask is not implemented"))
+}
+
+func (UnimplementedTaskServiceHandler) ListTask(context.Context, *connect.Request[v1.ListTaskRequest]) (*connect.Response[v1.ListTaskResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("example.kanban.task.v1.TaskService.ListTask is not implemented"))
 }

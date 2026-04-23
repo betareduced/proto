@@ -17,6 +17,56 @@
   ],
   "paths": {
     "/example/kanban/v1/tasks": {
+      "get": {
+        "operationId": "TaskService_ListTask",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/example.kanban.task.v1.ListTaskResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/google.rpc.Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "f.status",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "BACKLOG",
+              "READY",
+              "DOING",
+              "REVIEW",
+              "DONE",
+              "ARCHIVED"
+            ],
+            "default": "BACKLOG"
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "CREATED_AT_ASC",
+              "CREATED_AT_DESC",
+              "UPDATED_AT_ASC",
+              "UPDATED_AT_DESC"
+            ],
+            "default": "CREATED_AT_ASC"
+          }
+        ],
+        "tags": [
+          "TaskService"
+        ]
+      },
       "post": {
         "operationId": "TaskService_CreateTask",
         "responses": {
@@ -122,6 +172,36 @@
       "properties": {
         "task": {
           "$ref": "#/definitions/example.kanban.task.v1.Task"
+        }
+      }
+    },
+    "example.kanban.task.v1.ListTaskRequest.Filter": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/example.kanban.task.v1.Status"
+        }
+      }
+    },
+    "example.kanban.task.v1.ListTaskRequest.Sortkey": {
+      "type": "string",
+      "enum": [
+        "CREATED_AT_ASC",
+        "CREATED_AT_DESC",
+        "UPDATED_AT_ASC",
+        "UPDATED_AT_DESC"
+      ],
+      "default": "CREATED_AT_ASC"
+    },
+    "example.kanban.task.v1.ListTaskResponse": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/example.kanban.task.v1.Task"
+          }
         }
       }
     },

@@ -74,6 +74,37 @@ public final class TaskServiceGrpc {
     return getGetTaskMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.betareduced.proto.example.kanban.task.v1.ListTaskRequest,
+      com.betareduced.proto.example.kanban.task.v1.ListTaskResponse> getListTaskMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListTask",
+      requestType = com.betareduced.proto.example.kanban.task.v1.ListTaskRequest.class,
+      responseType = com.betareduced.proto.example.kanban.task.v1.ListTaskResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.betareduced.proto.example.kanban.task.v1.ListTaskRequest,
+      com.betareduced.proto.example.kanban.task.v1.ListTaskResponse> getListTaskMethod() {
+    io.grpc.MethodDescriptor<com.betareduced.proto.example.kanban.task.v1.ListTaskRequest, com.betareduced.proto.example.kanban.task.v1.ListTaskResponse> getListTaskMethod;
+    if ((getListTaskMethod = TaskServiceGrpc.getListTaskMethod) == null) {
+      synchronized (TaskServiceGrpc.class) {
+        if ((getListTaskMethod = TaskServiceGrpc.getListTaskMethod) == null) {
+          TaskServiceGrpc.getListTaskMethod = getListTaskMethod =
+              io.grpc.MethodDescriptor.<com.betareduced.proto.example.kanban.task.v1.ListTaskRequest, com.betareduced.proto.example.kanban.task.v1.ListTaskResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTask"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.betareduced.proto.example.kanban.task.v1.ListTaskRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.betareduced.proto.example.kanban.task.v1.ListTaskResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TaskServiceMethodDescriptorSupplier("ListTask"))
+              .build();
+        }
+      }
+    }
+    return getListTaskMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -150,6 +181,13 @@ public final class TaskServiceGrpc {
         io.grpc.stub.StreamObserver<com.betareduced.proto.example.kanban.task.v1.GetTaskResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTaskMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void listTask(com.betareduced.proto.example.kanban.task.v1.ListTaskRequest request,
+        io.grpc.stub.StreamObserver<com.betareduced.proto.example.kanban.task.v1.ListTaskResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTaskMethod(), responseObserver);
+    }
   }
 
   /**
@@ -194,6 +232,14 @@ public final class TaskServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTaskMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void listTask(com.betareduced.proto.example.kanban.task.v1.ListTaskRequest request,
+        io.grpc.stub.StreamObserver<com.betareduced.proto.example.kanban.task.v1.ListTaskResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListTaskMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -225,6 +271,13 @@ public final class TaskServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetTaskMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.betareduced.proto.example.kanban.task.v1.ListTaskResponse listTask(com.betareduced.proto.example.kanban.task.v1.ListTaskRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListTaskMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -255,6 +308,13 @@ public final class TaskServiceGrpc {
     public com.betareduced.proto.example.kanban.task.v1.GetTaskResponse getTask(com.betareduced.proto.example.kanban.task.v1.GetTaskRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTaskMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.betareduced.proto.example.kanban.task.v1.ListTaskResponse listTask(com.betareduced.proto.example.kanban.task.v1.ListTaskRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListTaskMethod(), getCallOptions(), request);
     }
   }
 
@@ -289,10 +349,19 @@ public final class TaskServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTaskMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.betareduced.proto.example.kanban.task.v1.ListTaskResponse> listTask(
+        com.betareduced.proto.example.kanban.task.v1.ListTaskRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListTaskMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TASK = 0;
   private static final int METHODID_GET_TASK = 1;
+  private static final int METHODID_LIST_TASK = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -318,6 +387,10 @@ public final class TaskServiceGrpc {
         case METHODID_GET_TASK:
           serviceImpl.getTask((com.betareduced.proto.example.kanban.task.v1.GetTaskRequest) request,
               (io.grpc.stub.StreamObserver<com.betareduced.proto.example.kanban.task.v1.GetTaskResponse>) responseObserver);
+          break;
+        case METHODID_LIST_TASK:
+          serviceImpl.listTask((com.betareduced.proto.example.kanban.task.v1.ListTaskRequest) request,
+              (io.grpc.stub.StreamObserver<com.betareduced.proto.example.kanban.task.v1.ListTaskResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -351,6 +424,13 @@ public final class TaskServiceGrpc {
               com.betareduced.proto.example.kanban.task.v1.GetTaskRequest,
               com.betareduced.proto.example.kanban.task.v1.GetTaskResponse>(
                 service, METHODID_GET_TASK)))
+        .addMethod(
+          getListTaskMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.betareduced.proto.example.kanban.task.v1.ListTaskRequest,
+              com.betareduced.proto.example.kanban.task.v1.ListTaskResponse>(
+                service, METHODID_LIST_TASK)))
         .build();
   }
 
@@ -401,6 +481,7 @@ public final class TaskServiceGrpc {
               .setSchemaDescriptor(new TaskServiceFileDescriptorSupplier())
               .addMethod(getCreateTaskMethod())
               .addMethod(getGetTaskMethod())
+              .addMethod(getListTaskMethod())
               .build();
         }
       }

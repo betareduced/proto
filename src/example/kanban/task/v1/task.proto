@@ -21,6 +21,27 @@ service TaskService {
   rpc GetTask(GetTaskRequest) returns (GetTaskResponse) {
     option (google.api.http) = {get: "/example/kanban/v1/tasks/{id}"};
   }
+  rpc ListTask(ListTaskRequest) returns (ListTaskResponse) {
+    option (google.api.http) = {get: "/example/kanban/v1/tasks"};
+  }
+}
+
+message ListTaskRequest {
+  message Filter {
+    Status status = 1;
+  }
+  enum Sortkey {
+    CREATED_AT_ASC = 0;
+    CREATED_AT_DESC = 1;
+    UPDATED_AT_ASC = 2;
+    UPDATED_AT_DESC = 3;
+  }
+  Filter f = 1;
+  Sortkey sort_by = 2;
+}
+
+message ListTaskResponse {
+  repeated Task content = 1;
 }
 
 enum Status {

@@ -83,6 +83,154 @@ func (Status) EnumDescriptor() ([]byte, []int) {
 	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{0}
 }
 
+type ListTaskRequest_Sortkey int32
+
+const (
+	ListTaskRequest_CREATED_AT_ASC  ListTaskRequest_Sortkey = 0
+	ListTaskRequest_CREATED_AT_DESC ListTaskRequest_Sortkey = 1
+	ListTaskRequest_UPDATED_AT_ASC  ListTaskRequest_Sortkey = 2
+	ListTaskRequest_UPDATED_AT_DESC ListTaskRequest_Sortkey = 3
+)
+
+// Enum value maps for ListTaskRequest_Sortkey.
+var (
+	ListTaskRequest_Sortkey_name = map[int32]string{
+		0: "CREATED_AT_ASC",
+		1: "CREATED_AT_DESC",
+		2: "UPDATED_AT_ASC",
+		3: "UPDATED_AT_DESC",
+	}
+	ListTaskRequest_Sortkey_value = map[string]int32{
+		"CREATED_AT_ASC":  0,
+		"CREATED_AT_DESC": 1,
+		"UPDATED_AT_ASC":  2,
+		"UPDATED_AT_DESC": 3,
+	}
+)
+
+func (x ListTaskRequest_Sortkey) Enum() *ListTaskRequest_Sortkey {
+	p := new(ListTaskRequest_Sortkey)
+	*p = x
+	return p
+}
+
+func (x ListTaskRequest_Sortkey) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (ListTaskRequest_Sortkey) Descriptor() protoreflect.EnumDescriptor {
+	return file_example_kanban_task_v1_task_proto_enumTypes[1].Descriptor()
+}
+
+func (ListTaskRequest_Sortkey) Type() protoreflect.EnumType {
+	return &file_example_kanban_task_v1_task_proto_enumTypes[1]
+}
+
+func (x ListTaskRequest_Sortkey) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use ListTaskRequest_Sortkey.Descriptor instead.
+func (ListTaskRequest_Sortkey) EnumDescriptor() ([]byte, []int) {
+	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{0, 0}
+}
+
+type ListTaskRequest struct {
+	state         protoimpl.MessageState   `protogen:"open.v1"`
+	F             *ListTaskRequest_Filter  `protobuf:"bytes,1,opt,name=f" json:"f,omitempty"`
+	SortBy        *ListTaskRequest_Sortkey `protobuf:"varint,2,opt,name=sort_by,json=sortBy,enum=example.kanban.task.v1.ListTaskRequest_Sortkey" json:"sort_by,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListTaskRequest) Reset() {
+	*x = ListTaskRequest{}
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[0]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListTaskRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListTaskRequest) ProtoMessage() {}
+
+func (x *ListTaskRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[0]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListTaskRequest.ProtoReflect.Descriptor instead.
+func (*ListTaskRequest) Descriptor() ([]byte, []int) {
+	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{0}
+}
+
+func (x *ListTaskRequest) GetF() *ListTaskRequest_Filter {
+	if x != nil {
+		return x.F
+	}
+	return nil
+}
+
+func (x *ListTaskRequest) GetSortBy() ListTaskRequest_Sortkey {
+	if x != nil && x.SortBy != nil {
+		return *x.SortBy
+	}
+	return ListTaskRequest_CREATED_AT_ASC
+}
+
+type ListTaskResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Content       []*Task                `protobuf:"bytes,1,rep,name=content" json:"content,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListTaskResponse) Reset() {
+	*x = ListTaskResponse{}
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[1]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListTaskResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListTaskResponse) ProtoMessage() {}
+
+func (x *ListTaskResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[1]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListTaskResponse.ProtoReflect.Descriptor instead.
+func (*ListTaskResponse) Descriptor() ([]byte, []int) {
+	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *ListTaskResponse) GetContent() []*Task {
+	if x != nil {
+		return x.Content
+	}
+	return nil
+}
+
 type GetTaskRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Id            *string                `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
@@ -92,7 +240,7 @@ type GetTaskRequest struct {
 
 func (x *GetTaskRequest) Reset() {
 	*x = GetTaskRequest{}
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[0]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -104,7 +252,7 @@ func (x *GetTaskRequest) String() string {
 func (*GetTaskRequest) ProtoMessage() {}
 
 func (x *GetTaskRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[0]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -117,7 +265,7 @@ func (x *GetTaskRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTaskRequest.ProtoReflect.Descriptor instead.
 func (*GetTaskRequest) Descriptor() ([]byte, []int) {
-	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{0}
+	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *GetTaskRequest) GetId() string {
@@ -136,7 +284,7 @@ type GetTaskResponse struct {
 
 func (x *GetTaskResponse) Reset() {
 	*x = GetTaskResponse{}
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[1]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -148,7 +296,7 @@ func (x *GetTaskResponse) String() string {
 func (*GetTaskResponse) ProtoMessage() {}
 
 func (x *GetTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[1]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -161,7 +309,7 @@ func (x *GetTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTaskResponse.ProtoReflect.Descriptor instead.
 func (*GetTaskResponse) Descriptor() ([]byte, []int) {
-	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{1}
+	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *GetTaskResponse) GetTask() *Task {
@@ -184,7 +332,7 @@ type Task struct {
 
 func (x *Task) Reset() {
 	*x = Task{}
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[2]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -196,7 +344,7 @@ func (x *Task) String() string {
 func (*Task) ProtoMessage() {}
 
 func (x *Task) ProtoReflect() protoreflect.Message {
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[2]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -209,7 +357,7 @@ func (x *Task) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Task.ProtoReflect.Descriptor instead.
 func (*Task) Descriptor() ([]byte, []int) {
-	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{2}
+	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *Task) GetId() string {
@@ -257,7 +405,7 @@ type CreateTaskRequest struct {
 
 func (x *CreateTaskRequest) Reset() {
 	*x = CreateTaskRequest{}
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[3]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -269,7 +417,7 @@ func (x *CreateTaskRequest) String() string {
 func (*CreateTaskRequest) ProtoMessage() {}
 
 func (x *CreateTaskRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[3]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -282,7 +430,7 @@ func (x *CreateTaskRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateTaskRequest.ProtoReflect.Descriptor instead.
 func (*CreateTaskRequest) Descriptor() ([]byte, []int) {
-	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{3}
+	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *CreateTaskRequest) GetName() string {
@@ -308,7 +456,7 @@ type CreateTaskResponse struct {
 
 func (x *CreateTaskResponse) Reset() {
 	*x = CreateTaskResponse{}
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[4]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -320,7 +468,7 @@ func (x *CreateTaskResponse) String() string {
 func (*CreateTaskResponse) ProtoMessage() {}
 
 func (x *CreateTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_example_kanban_task_v1_task_proto_msgTypes[4]
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -333,7 +481,7 @@ func (x *CreateTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateTaskResponse.ProtoReflect.Descriptor instead.
 func (*CreateTaskResponse) Descriptor() ([]byte, []int) {
-	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{4}
+	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *CreateTaskResponse) GetTask() *Task {
@@ -343,11 +491,67 @@ func (x *CreateTaskResponse) GetTask() *Task {
 	return nil
 }
 
+type ListTaskRequest_Filter struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Status        *Status                `protobuf:"varint,1,opt,name=status,enum=example.kanban.task.v1.Status" json:"status,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListTaskRequest_Filter) Reset() {
+	*x = ListTaskRequest_Filter{}
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[7]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListTaskRequest_Filter) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListTaskRequest_Filter) ProtoMessage() {}
+
+func (x *ListTaskRequest_Filter) ProtoReflect() protoreflect.Message {
+	mi := &file_example_kanban_task_v1_task_proto_msgTypes[7]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListTaskRequest_Filter.ProtoReflect.Descriptor instead.
+func (*ListTaskRequest_Filter) Descriptor() ([]byte, []int) {
+	return file_example_kanban_task_v1_task_proto_rawDescGZIP(), []int{0, 0}
+}
+
+func (x *ListTaskRequest_Filter) GetStatus() Status {
+	if x != nil && x.Status != nil {
+		return *x.Status
+	}
+	return Status_BACKLOG
+}
+
 var File_example_kanban_task_v1_task_proto protoreflect.FileDescriptor
 
 const file_example_kanban_task_v1_task_proto_rawDesc = "" +
 	"\n" +
-	"!example/kanban/task/v1/task.proto\x12\x16example.kanban.task.v1\x1a\x1bbuf/validate/validate.proto\x1a%common/wkt/v1/record_timestamps.proto\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\" \n" +
+	"!example/kanban/task/v1/task.proto\x12\x16example.kanban.task.v1\x1a\x1bbuf/validate/validate.proto\x1a%common/wkt/v1/record_timestamps.proto\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\"\xb8\x02\n" +
+	"\x0fListTaskRequest\x12<\n" +
+	"\x01f\x18\x01 \x01(\v2..example.kanban.task.v1.ListTaskRequest.FilterR\x01f\x12H\n" +
+	"\asort_by\x18\x02 \x01(\x0e2/.example.kanban.task.v1.ListTaskRequest.SortkeyR\x06sortBy\x1a@\n" +
+	"\x06Filter\x126\n" +
+	"\x06status\x18\x01 \x01(\x0e2\x1e.example.kanban.task.v1.StatusR\x06status\"[\n" +
+	"\aSortkey\x12\x12\n" +
+	"\x0eCREATED_AT_ASC\x10\x00\x12\x13\n" +
+	"\x0fCREATED_AT_DESC\x10\x01\x12\x12\n" +
+	"\x0eUPDATED_AT_ASC\x10\x02\x12\x13\n" +
+	"\x0fUPDATED_AT_DESC\x10\x03\"J\n" +
+	"\x10ListTaskResponse\x126\n" +
+	"\acontent\x18\x01 \x03(\v2\x1c.example.kanban.task.v1.TaskR\acontent\" \n" +
 	"\x0eGetTaskRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\"C\n" +
 	"\x0fGetTaskResponse\x120\n" +
@@ -373,11 +577,12 @@ const file_example_kanban_task_v1_task_proto_rawDesc = "" +
 	"\n" +
 	"\x06REVIEW\x10\x03\x12\b\n" +
 	"\x04DONE\x10\x04\x12\f\n" +
-	"\bARCHIVED\x10\x052\x9c\x02\n" +
+	"\bARCHIVED\x10\x052\x9d\x03\n" +
 	"\vTaskService\x12\x88\x01\n" +
 	"\n" +
 	"CreateTask\x12).example.kanban.task.v1.CreateTaskRequest\x1a*.example.kanban.task.v1.CreateTaskResponse\"#\x82\xd3\xe4\x93\x02\x1d:\x01*\"\x18/example/kanban/v1/tasks\x12\x81\x01\n" +
-	"\aGetTask\x12&.example.kanban.task.v1.GetTaskRequest\x1a'.example.kanban.task.v1.GetTaskResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/example/kanban/v1/tasks/{id}Bo\n" +
+	"\aGetTask\x12&.example.kanban.task.v1.GetTaskRequest\x1a'.example.kanban.task.v1.GetTaskResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/example/kanban/v1/tasks/{id}\x12\x7f\n" +
+	"\bListTask\x12'.example.kanban.task.v1.ListTaskRequest\x1a(.example.kanban.task.v1.ListTaskResponse\" \x82\xd3\xe4\x93\x02\x1a\x12\x18/example/kanban/v1/tasksBo\n" +
 	",com.betareduced.proto.example.kanban.task.v1P\x01Z=github.com/betareduced/proto/go/example/kanban/task/v1;taskpbb\beditionsp\xe8\a"
 
 var (
@@ -392,31 +597,41 @@ func file_example_kanban_task_v1_task_proto_rawDescGZIP() []byte {
 	return file_example_kanban_task_v1_task_proto_rawDescData
 }
 
-var file_example_kanban_task_v1_task_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_example_kanban_task_v1_task_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_example_kanban_task_v1_task_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
+var file_example_kanban_task_v1_task_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_example_kanban_task_v1_task_proto_goTypes = []any{
-	(Status)(0),                 // 0: example.kanban.task.v1.Status
-	(*GetTaskRequest)(nil),      // 1: example.kanban.task.v1.GetTaskRequest
-	(*GetTaskResponse)(nil),     // 2: example.kanban.task.v1.GetTaskResponse
-	(*Task)(nil),                // 3: example.kanban.task.v1.Task
-	(*CreateTaskRequest)(nil),   // 4: example.kanban.task.v1.CreateTaskRequest
-	(*CreateTaskResponse)(nil),  // 5: example.kanban.task.v1.CreateTaskResponse
-	(*v1.RecordTimestamps)(nil), // 6: common.wkt.v1.RecordTimestamps
+	(Status)(0),                    // 0: example.kanban.task.v1.Status
+	(ListTaskRequest_Sortkey)(0),   // 1: example.kanban.task.v1.ListTaskRequest.Sortkey
+	(*ListTaskRequest)(nil),        // 2: example.kanban.task.v1.ListTaskRequest
+	(*ListTaskResponse)(nil),       // 3: example.kanban.task.v1.ListTaskResponse
+	(*GetTaskRequest)(nil),         // 4: example.kanban.task.v1.GetTaskRequest
+	(*GetTaskResponse)(nil),        // 5: example.kanban.task.v1.GetTaskResponse
+	(*Task)(nil),                   // 6: example.kanban.task.v1.Task
+	(*CreateTaskRequest)(nil),      // 7: example.kanban.task.v1.CreateTaskRequest
+	(*CreateTaskResponse)(nil),     // 8: example.kanban.task.v1.CreateTaskResponse
+	(*ListTaskRequest_Filter)(nil), // 9: example.kanban.task.v1.ListTaskRequest.Filter
+	(*v1.RecordTimestamps)(nil),    // 10: common.wkt.v1.RecordTimestamps
 }
 var file_example_kanban_task_v1_task_proto_depIdxs = []int32{
-	3, // 0: example.kanban.task.v1.GetTaskResponse.task:type_name -> example.kanban.task.v1.Task
-	0, // 1: example.kanban.task.v1.Task.status:type_name -> example.kanban.task.v1.Status
-	6, // 2: example.kanban.task.v1.Task.timestamps:type_name -> common.wkt.v1.RecordTimestamps
-	3, // 3: example.kanban.task.v1.CreateTaskResponse.task:type_name -> example.kanban.task.v1.Task
-	4, // 4: example.kanban.task.v1.TaskService.CreateTask:input_type -> example.kanban.task.v1.CreateTaskRequest
-	1, // 5: example.kanban.task.v1.TaskService.GetTask:input_type -> example.kanban.task.v1.GetTaskRequest
-	5, // 6: example.kanban.task.v1.TaskService.CreateTask:output_type -> example.kanban.task.v1.CreateTaskResponse
-	2, // 7: example.kanban.task.v1.TaskService.GetTask:output_type -> example.kanban.task.v1.GetTaskResponse
-	6, // [6:8] is the sub-list for method output_type
-	4, // [4:6] is the sub-list for method input_type
-	4, // [4:4] is the sub-list for extension type_name
-	4, // [4:4] is the sub-list for extension extendee
-	0, // [0:4] is the sub-list for field type_name
+	9,  // 0: example.kanban.task.v1.ListTaskRequest.f:type_name -> example.kanban.task.v1.ListTaskRequest.Filter
+	1,  // 1: example.kanban.task.v1.ListTaskRequest.sort_by:type_name -> example.kanban.task.v1.ListTaskRequest.Sortkey
+	6,  // 2: example.kanban.task.v1.ListTaskResponse.content:type_name -> example.kanban.task.v1.Task
+	6,  // 3: example.kanban.task.v1.GetTaskResponse.task:type_name -> example.kanban.task.v1.Task
+	0,  // 4: example.kanban.task.v1.Task.status:type_name -> example.kanban.task.v1.Status
+	10, // 5: example.kanban.task.v1.Task.timestamps:type_name -> common.wkt.v1.RecordTimestamps
+	6,  // 6: example.kanban.task.v1.CreateTaskResponse.task:type_name -> example.kanban.task.v1.Task
+	0,  // 7: example.kanban.task.v1.ListTaskRequest.Filter.status:type_name -> example.kanban.task.v1.Status
+	7,  // 8: example.kanban.task.v1.TaskService.CreateTask:input_type -> example.kanban.task.v1.CreateTaskRequest
+	4,  // 9: example.kanban.task.v1.TaskService.GetTask:input_type -> example.kanban.task.v1.GetTaskRequest
+	2,  // 10: example.kanban.task.v1.TaskService.ListTask:input_type -> example.kanban.task.v1.ListTaskRequest
+	8,  // 11: example.kanban.task.v1.TaskService.CreateTask:output_type -> example.kanban.task.v1.CreateTaskResponse
+	5,  // 12: example.kanban.task.v1.TaskService.GetTask:output_type -> example.kanban.task.v1.GetTaskResponse
+	3,  // 13: example.kanban.task.v1.TaskService.ListTask:output_type -> example.kanban.task.v1.ListTaskResponse
+	11, // [11:14] is the sub-list for method output_type
+	8,  // [8:11] is the sub-list for method input_type
+	8,  // [8:8] is the sub-list for extension type_name
+	8,  // [8:8] is the sub-list for extension extendee
+	0,  // [0:8] is the sub-list for field type_name
 }
 
 func init() { file_example_kanban_task_v1_task_proto_init() }
@@ -429,8 +644,8 @@ func file_example_kanban_task_v1_task_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_example_kanban_task_v1_task_proto_rawDesc), len(file_example_kanban_task_v1_task_proto_rawDesc)),
-			NumEnums:      1,
-			NumMessages:   5,
+			NumEnums:      2,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

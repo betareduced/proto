@@ -27,6 +27,21 @@ public final class TaskOuterClass extends com.google.protobuf.GeneratedFile {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_example_kanban_task_v1_ListTaskRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_example_kanban_task_v1_ListTaskRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_example_kanban_task_v1_ListTaskRequest_Filter_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_example_kanban_task_v1_ListTaskRequest_Filter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_example_kanban_task_v1_ListTaskResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_example_kanban_task_v1_ListTaskResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_example_kanban_task_v1_GetTaskRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -65,29 +80,42 @@ public final class TaskOuterClass extends com.google.protobuf.GeneratedFile {
       "te.proto\032%common/wkt/v1/record_timestamp" +
       "s.proto\032\034google/api/annotations.proto\032.p" +
       "rotoc-gen-openapiv2/options/annotations." +
-      "proto\" \n\016GetTaskRequest\022\016\n\002id\030\001 \001(\tR\002id\"" +
-      "C\n\017GetTaskResponse\0220\n\004task\030\001 \001(\0132\034.examp" +
-      "le.kanban.task.v1.TaskR\004task\"\341\001\n\004Task\022\030\n" +
-      "\002id\030\001 \001(\tB\010\272H\005r\003\260\001\001R\002id\022\036\n\004name\030\002 \001(\tB\n\272" +
-      "H\007r\005\020\001\030\310\001R\004name\022\034\n\004desc\030\003 \001(\tB\010\272H\005r\003\030\240\037R" +
-      "\004desc\022@\n\006status\030\004 \001(\0162\036.example.kanban.t" +
-      "ask.v1.StatusB\010\272H\005\202\001\002\020\001R\006status\022?\n\ntimes" +
-      "tamps\030\005 \001(\0132\037.common.wkt.v1.RecordTimest" +
-      "ampsR\ntimestamps\"a\n\021CreateTaskRequest\022.\n" +
-      "\004name\030\001 \001(\tB\032\222A\rJ\013\"Your Todo\"\272H\007r\005\020\001\030\310\001R" +
-      "\004name\022\034\n\004desc\030\002 \001(\tB\010\272H\005r\003\030\240\037R\004desc\"N\n\022C" +
-      "reateTaskResponse\0228\n\004task\030\001 \001(\0132\034.exampl" +
-      "e.kanban.task.v1.TaskB\006\272H\003\310\001\001R\004task*O\n\006S" +
-      "tatus\022\013\n\007BACKLOG\020\000\022\t\n\005READY\020\001\022\t\n\005DOING\020\002" +
-      "\022\n\n\006REVIEW\020\003\022\010\n\004DONE\020\004\022\014\n\010ARCHIVED\020\0052\234\002\n" +
-      "\013TaskService\022\210\001\n\nCreateTask\022).example.ka" +
-      "nban.task.v1.CreateTaskRequest\032*.example" +
-      ".kanban.task.v1.CreateTaskResponse\"#\202\323\344\223" +
-      "\002\035\"\030/example/kanban/v1/tasks:\001*\022\201\001\n\007GetT" +
-      "ask\022&.example.kanban.task.v1.GetTaskRequ" +
-      "est\032\'.example.kanban.task.v1.GetTaskResp" +
-      "onse\"%\202\323\344\223\002\037\022\035/example/kanban/v1/tasks/{" +
-      "id}Bo\n,com.betareduced.proto.example.kan" +
+      "proto\"\270\002\n\017ListTaskRequest\022<\n\001f\030\001 \001(\0132..e" +
+      "xample.kanban.task.v1.ListTaskRequest.Fi" +
+      "lterR\001f\022H\n\007sort_by\030\002 \001(\0162/.example.kanba" +
+      "n.task.v1.ListTaskRequest.SortkeyR\006sortB" +
+      "y\032@\n\006Filter\0226\n\006status\030\001 \001(\0162\036.example.ka" +
+      "nban.task.v1.StatusR\006status\"[\n\007Sortkey\022\022" +
+      "\n\016CREATED_AT_ASC\020\000\022\023\n\017CREATED_AT_DESC\020\001\022" +
+      "\022\n\016UPDATED_AT_ASC\020\002\022\023\n\017UPDATED_AT_DESC\020\003" +
+      "\"J\n\020ListTaskResponse\0226\n\007content\030\001 \003(\0132\034." +
+      "example.kanban.task.v1.TaskR\007content\" \n\016" +
+      "GetTaskRequest\022\016\n\002id\030\001 \001(\tR\002id\"C\n\017GetTas" +
+      "kResponse\0220\n\004task\030\001 \001(\0132\034.example.kanban" +
+      ".task.v1.TaskR\004task\"\341\001\n\004Task\022\030\n\002id\030\001 \001(\t" +
+      "B\010\272H\005r\003\260\001\001R\002id\022\036\n\004name\030\002 \001(\tB\n\272H\007r\005\020\001\030\310\001" +
+      "R\004name\022\034\n\004desc\030\003 \001(\tB\010\272H\005r\003\030\240\037R\004desc\022@\n\006" +
+      "status\030\004 \001(\0162\036.example.kanban.task.v1.St" +
+      "atusB\010\272H\005\202\001\002\020\001R\006status\022?\n\ntimestamps\030\005 \001" +
+      "(\0132\037.common.wkt.v1.RecordTimestampsR\ntim" +
+      "estamps\"a\n\021CreateTaskRequest\022.\n\004name\030\001 \001" +
+      "(\tB\032\222A\rJ\013\"Your Todo\"\272H\007r\005\020\001\030\310\001R\004name\022\034\n\004" +
+      "desc\030\002 \001(\tB\010\272H\005r\003\030\240\037R\004desc\"N\n\022CreateTask" +
+      "Response\0228\n\004task\030\001 \001(\0132\034.example.kanban." +
+      "task.v1.TaskB\006\272H\003\310\001\001R\004task*O\n\006Status\022\013\n\007" +
+      "BACKLOG\020\000\022\t\n\005READY\020\001\022\t\n\005DOING\020\002\022\n\n\006REVIE" +
+      "W\020\003\022\010\n\004DONE\020\004\022\014\n\010ARCHIVED\020\0052\235\003\n\013TaskServ" +
+      "ice\022\210\001\n\nCreateTask\022).example.kanban.task" +
+      ".v1.CreateTaskRequest\032*.example.kanban.t" +
+      "ask.v1.CreateTaskResponse\"#\202\323\344\223\002\035\"\030/exam" +
+      "ple/kanban/v1/tasks:\001*\022\201\001\n\007GetTask\022&.exa" +
+      "mple.kanban.task.v1.GetTaskRequest\032\'.exa" +
+      "mple.kanban.task.v1.GetTaskResponse\"%\202\323\344" +
+      "\223\002\037\022\035/example/kanban/v1/tasks/{id}\022\177\n\010Li" +
+      "stTask\022\'.example.kanban.task.v1.ListTask" +
+      "Request\032(.example.kanban.task.v1.ListTas" +
+      "kResponse\" \202\323\344\223\002\032\022\030/example/kanban/v1/ta" +
+      "sksBo\n,com.betareduced.proto.example.kan" +
       "ban.task.v1P\001Z=github.com/betareduced/pr" +
       "oto/go/example/kanban/task/v1;taskpbb\010ed" +
       "itionsp\350\007"
@@ -100,32 +128,50 @@ public final class TaskOuterClass extends com.google.protobuf.GeneratedFile {
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
-    internal_static_example_kanban_task_v1_GetTaskRequest_descriptor =
+    internal_static_example_kanban_task_v1_ListTaskRequest_descriptor =
       getDescriptor().getMessageType(0);
+    internal_static_example_kanban_task_v1_ListTaskRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_example_kanban_task_v1_ListTaskRequest_descriptor,
+        new java.lang.String[] { "F", "SortBy", });
+    internal_static_example_kanban_task_v1_ListTaskRequest_Filter_descriptor =
+      internal_static_example_kanban_task_v1_ListTaskRequest_descriptor.getNestedType(0);
+    internal_static_example_kanban_task_v1_ListTaskRequest_Filter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_example_kanban_task_v1_ListTaskRequest_Filter_descriptor,
+        new java.lang.String[] { "Status", });
+    internal_static_example_kanban_task_v1_ListTaskResponse_descriptor =
+      getDescriptor().getMessageType(1);
+    internal_static_example_kanban_task_v1_ListTaskResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_example_kanban_task_v1_ListTaskResponse_descriptor,
+        new java.lang.String[] { "Content", });
+    internal_static_example_kanban_task_v1_GetTaskRequest_descriptor =
+      getDescriptor().getMessageType(2);
     internal_static_example_kanban_task_v1_GetTaskRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_example_kanban_task_v1_GetTaskRequest_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_example_kanban_task_v1_GetTaskResponse_descriptor =
-      getDescriptor().getMessageType(1);
+      getDescriptor().getMessageType(3);
     internal_static_example_kanban_task_v1_GetTaskResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_example_kanban_task_v1_GetTaskResponse_descriptor,
         new java.lang.String[] { "Task", });
     internal_static_example_kanban_task_v1_Task_descriptor =
-      getDescriptor().getMessageType(2);
+      getDescriptor().getMessageType(4);
     internal_static_example_kanban_task_v1_Task_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_example_kanban_task_v1_Task_descriptor,
         new java.lang.String[] { "Id", "Name", "Desc", "Status", "Timestamps", });
     internal_static_example_kanban_task_v1_CreateTaskRequest_descriptor =
-      getDescriptor().getMessageType(3);
+      getDescriptor().getMessageType(5);
     internal_static_example_kanban_task_v1_CreateTaskRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_example_kanban_task_v1_CreateTaskRequest_descriptor,
         new java.lang.String[] { "Name", "Desc", });
     internal_static_example_kanban_task_v1_CreateTaskResponse_descriptor =
-      getDescriptor().getMessageType(4);
+      getDescriptor().getMessageType(6);
     internal_static_example_kanban_task_v1_CreateTaskResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_example_kanban_task_v1_CreateTaskResponse_descriptor,
