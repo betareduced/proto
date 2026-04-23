@@ -4,14 +4,23 @@ package example.kanban.task.v1;
 
 import "buf/validate/validate.proto";
 import "common/wkt/v1/record_timestamps.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
 
 option go_package = "github.com/betareduced/proto/go/example/kanban/task/v1;taskpb";
 option java_multiple_files = true;
 option java_package = "com.betareduced.proto.example.kanban.task.v1";
 
 service TaskService {
-  rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse);
-  rpc GetTask(GetTaskRequest) returns (GetTaskResponse);
+  rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse) {
+    option (google.api.http) = {
+      post: "/example/kanban/v1/tasks"
+      body: "*"
+    };
+  }
+  rpc GetTask(GetTaskRequest) returns (GetTaskResponse) {
+    option (google.api.http) = {get: "/example/kanban/v1/tasks/{id}"};
+  }
 }
 
 enum Status {
@@ -43,10 +52,13 @@ message Task {
 }
 
 message CreateTaskRequest {
-  string name = 1 [(buf.validate.field).string = {
-    min_len: 1
-    max_len: 200
-  }];
+  string name = 1 [
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Your Todo\""},
+    (buf.validate.field).string = {
+      min_len: 1
+      max_len: 200
+    }
+  ];
   string desc = 2 [(buf.validate.field).string.max_len = 4000];
 }
 

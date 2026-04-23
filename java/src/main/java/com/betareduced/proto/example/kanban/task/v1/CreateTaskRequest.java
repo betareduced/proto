@@ -55,7 +55,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+   * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -63,7 +63,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+   * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
    * @return The name.
    */
   @java.lang.Override
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+   * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -479,14 +479,14 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -542,7 +542,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+     * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */

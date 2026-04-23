@@ -11,17 +11,17 @@ public interface CreateTaskRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+   * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
   /**
-   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+   * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name", (.buf.validate.field) = { ... }</code>
+   * <code>string name = 1 [json_name = "name", (.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

@@ -9,6 +9,8 @@ package taskpb
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
 	v1 "github.com/betareduced/proto/go/common/wkt/v1"
+	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
+	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -345,7 +347,7 @@ var File_example_kanban_task_v1_task_proto protoreflect.FileDescriptor
 
 const file_example_kanban_task_v1_task_proto_rawDesc = "" +
 	"\n" +
-	"!example/kanban/task/v1/task.proto\x12\x16example.kanban.task.v1\x1a\x1bbuf/validate/validate.proto\x1a%common/wkt/v1/record_timestamps.proto\" \n" +
+	"!example/kanban/task/v1/task.proto\x12\x16example.kanban.task.v1\x1a\x1bbuf/validate/validate.proto\x1a%common/wkt/v1/record_timestamps.proto\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\" \n" +
 	"\x0eGetTaskRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\"C\n" +
 	"\x0fGetTaskResponse\x120\n" +
@@ -358,10 +360,9 @@ const file_example_kanban_task_v1_task_proto_rawDesc = "" +
 	"\x06status\x18\x04 \x01(\x0e2\x1e.example.kanban.task.v1.StatusB\b\xbaH\x05\x82\x01\x02\x10\x01R\x06status\x12?\n" +
 	"\n" +
 	"timestamps\x18\x05 \x01(\v2\x1f.common.wkt.v1.RecordTimestampsR\n" +
-	"timestamps\"Q\n" +
-	"\x11CreateTaskRequest\x12\x1e\n" +
-	"\x04name\x18\x01 \x01(\tB\n" +
-	"\xbaH\ar\x05\x10\x01\x18\xc8\x01R\x04name\x12\x1c\n" +
+	"timestamps\"a\n" +
+	"\x11CreateTaskRequest\x12.\n" +
+	"\x04name\x18\x01 \x01(\tB\x1a\x92A\rJ\v\"Your Todo\"\xbaH\ar\x05\x10\x01\x18\xc8\x01R\x04name\x12\x1c\n" +
 	"\x04desc\x18\x02 \x01(\tB\b\xbaH\x05r\x03\x18\xa0\x1fR\x04desc\"N\n" +
 	"\x12CreateTaskResponse\x128\n" +
 	"\x04task\x18\x01 \x01(\v2\x1c.example.kanban.task.v1.TaskB\x06\xbaH\x03\xc8\x01\x01R\x04task*O\n" +
@@ -372,11 +373,11 @@ const file_example_kanban_task_v1_task_proto_rawDesc = "" +
 	"\n" +
 	"\x06REVIEW\x10\x03\x12\b\n" +
 	"\x04DONE\x10\x04\x12\f\n" +
-	"\bARCHIVED\x10\x052\xce\x01\n" +
-	"\vTaskService\x12c\n" +
+	"\bARCHIVED\x10\x052\x9c\x02\n" +
+	"\vTaskService\x12\x88\x01\n" +
 	"\n" +
-	"CreateTask\x12).example.kanban.task.v1.CreateTaskRequest\x1a*.example.kanban.task.v1.CreateTaskResponse\x12Z\n" +
-	"\aGetTask\x12&.example.kanban.task.v1.GetTaskRequest\x1a'.example.kanban.task.v1.GetTaskResponseBo\n" +
+	"CreateTask\x12).example.kanban.task.v1.CreateTaskRequest\x1a*.example.kanban.task.v1.CreateTaskResponse\"#\x82\xd3\xe4\x93\x02\x1d:\x01*\"\x18/example/kanban/v1/tasks\x12\x81\x01\n" +
+	"\aGetTask\x12&.example.kanban.task.v1.GetTaskRequest\x1a'.example.kanban.task.v1.GetTaskResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/example/kanban/v1/tasks/{id}Bo\n" +
 	",com.betareduced.proto.example.kanban.task.v1P\x01Z=github.com/betareduced/proto/go/example/kanban/task/v1;taskpbb\beditionsp\xe8\a"
 
 var (

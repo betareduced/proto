@@ -17,3 +17,12 @@ plugins:
     out: web
     include_imports: true
     opt: [target=ts, import_extension=ts]
+  - local: protoc-gen-grpc-gateway
+    out: gen/proto
+    opt: [ paths=source_relative, generate_unbound_methods=true ]
+  - local: protoc-gen-openapiv2
+    out: openapi
+    opt:
+      - allow_merge=false
+      - generate_unbound_methods=true
+      - fqn_for_openapi_name=true

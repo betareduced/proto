@@ -10,6 +10,8 @@ protoc-gen-go-grpc = "1.6.1"
 "npm:typescript" = "latest"
 "npm:@bufbuild/protoc-gen-es" = "latest"
 "npm:zx" = "latest"
+"go:github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2" = "latest"
+"go:github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway" = "latest"
 
 [tasks.tidy]
 run = [

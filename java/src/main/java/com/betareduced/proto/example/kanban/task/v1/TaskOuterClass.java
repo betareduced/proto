@@ -63,35 +63,42 @@ public final class TaskOuterClass extends com.google.protobuf.GeneratedFile {
       "\n!example/kanban/task/v1/task.proto\022\026exa" +
       "mple.kanban.task.v1\032\033buf/validate/valida" +
       "te.proto\032%common/wkt/v1/record_timestamp" +
-      "s.proto\" \n\016GetTaskRequest\022\016\n\002id\030\001 \001(\tR\002i" +
-      "d\"C\n\017GetTaskResponse\0220\n\004task\030\001 \001(\0132\034.exa" +
-      "mple.kanban.task.v1.TaskR\004task\"\341\001\n\004Task\022" +
-      "\030\n\002id\030\001 \001(\tB\010\272H\005r\003\260\001\001R\002id\022\036\n\004name\030\002 \001(\tB" +
-      "\n\272H\007r\005\020\001\030\310\001R\004name\022\034\n\004desc\030\003 \001(\tB\010\272H\005r\003\030\240" +
-      "\037R\004desc\022@\n\006status\030\004 \001(\0162\036.example.kanban" +
-      ".task.v1.StatusB\010\272H\005\202\001\002\020\001R\006status\022?\n\ntim" +
-      "estamps\030\005 \001(\0132\037.common.wkt.v1.RecordTime" +
-      "stampsR\ntimestamps\"Q\n\021CreateTaskRequest\022" +
-      "\036\n\004name\030\001 \001(\tB\n\272H\007r\005\020\001\030\310\001R\004name\022\034\n\004desc\030" +
-      "\002 \001(\tB\010\272H\005r\003\030\240\037R\004desc\"N\n\022CreateTaskRespo" +
-      "nse\0228\n\004task\030\001 \001(\0132\034.example.kanban.task." +
-      "v1.TaskB\006\272H\003\310\001\001R\004task*O\n\006Status\022\013\n\007BACKL" +
-      "OG\020\000\022\t\n\005READY\020\001\022\t\n\005DOING\020\002\022\n\n\006REVIEW\020\003\022\010" +
-      "\n\004DONE\020\004\022\014\n\010ARCHIVED\020\0052\316\001\n\013TaskService\022c" +
-      "\n\nCreateTask\022).example.kanban.task.v1.Cr" +
-      "eateTaskRequest\032*.example.kanban.task.v1" +
-      ".CreateTaskResponse\022Z\n\007GetTask\022&.example" +
-      ".kanban.task.v1.GetTaskRequest\032\'.example" +
-      ".kanban.task.v1.GetTaskResponseBo\n,com.b" +
-      "etareduced.proto.example.kanban.task.v1P" +
-      "\001Z=github.com/betareduced/proto/go/examp" +
-      "le/kanban/task/v1;taskpbb\010editionsp\350\007"
+      "s.proto\032\034google/api/annotations.proto\032.p" +
+      "rotoc-gen-openapiv2/options/annotations." +
+      "proto\" \n\016GetTaskRequest\022\016\n\002id\030\001 \001(\tR\002id\"" +
+      "C\n\017GetTaskResponse\0220\n\004task\030\001 \001(\0132\034.examp" +
+      "le.kanban.task.v1.TaskR\004task\"\341\001\n\004Task\022\030\n" +
+      "\002id\030\001 \001(\tB\010\272H\005r\003\260\001\001R\002id\022\036\n\004name\030\002 \001(\tB\n\272" +
+      "H\007r\005\020\001\030\310\001R\004name\022\034\n\004desc\030\003 \001(\tB\010\272H\005r\003\030\240\037R" +
+      "\004desc\022@\n\006status\030\004 \001(\0162\036.example.kanban.t" +
+      "ask.v1.StatusB\010\272H\005\202\001\002\020\001R\006status\022?\n\ntimes" +
+      "tamps\030\005 \001(\0132\037.common.wkt.v1.RecordTimest" +
+      "ampsR\ntimestamps\"a\n\021CreateTaskRequest\022.\n" +
+      "\004name\030\001 \001(\tB\032\222A\rJ\013\"Your Todo\"\272H\007r\005\020\001\030\310\001R" +
+      "\004name\022\034\n\004desc\030\002 \001(\tB\010\272H\005r\003\030\240\037R\004desc\"N\n\022C" +
+      "reateTaskResponse\0228\n\004task\030\001 \001(\0132\034.exampl" +
+      "e.kanban.task.v1.TaskB\006\272H\003\310\001\001R\004task*O\n\006S" +
+      "tatus\022\013\n\007BACKLOG\020\000\022\t\n\005READY\020\001\022\t\n\005DOING\020\002" +
+      "\022\n\n\006REVIEW\020\003\022\010\n\004DONE\020\004\022\014\n\010ARCHIVED\020\0052\234\002\n" +
+      "\013TaskService\022\210\001\n\nCreateTask\022).example.ka" +
+      "nban.task.v1.CreateTaskRequest\032*.example" +
+      ".kanban.task.v1.CreateTaskResponse\"#\202\323\344\223" +
+      "\002\035\"\030/example/kanban/v1/tasks:\001*\022\201\001\n\007GetT" +
+      "ask\022&.example.kanban.task.v1.GetTaskRequ" +
+      "est\032\'.example.kanban.task.v1.GetTaskResp" +
+      "onse\"%\202\323\344\223\002\037\022\035/example/kanban/v1/tasks/{" +
+      "id}Bo\n,com.betareduced.proto.example.kan" +
+      "ban.task.v1P\001Z=github.com/betareduced/pr" +
+      "oto/go/example/kanban/task/v1;taskpbb\010ed" +
+      "itionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           build.buf.validate.ValidateProto.getDescriptor(),
           com.betareduced.proto.common.wkt.v1.RecordTimestampsOuterClass.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_example_kanban_task_v1_GetTaskRequest_descriptor =
       getDescriptor().getMessageType(0);
@@ -126,9 +133,13 @@ public final class TaskOuterClass extends com.google.protobuf.GeneratedFile {
     descriptor.resolveAllFeaturesImmutable();
     build.buf.validate.ValidateProto.getDescriptor();
     com.betareduced.proto.common.wkt.v1.RecordTimestampsOuterClass.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(build.buf.validate.ValidateProto.field);
+    registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
   }
