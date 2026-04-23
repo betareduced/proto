@@ -13,7 +13,41 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file example/kanban/task/v1/task.proto.
  */
 export const file_example_kanban_task_v1_task: GenFile = /*@__PURE__*/
-  fileDesc("CiFleGFtcGxlL2thbmJhbi90YXNrL3YxL3Rhc2sucHJvdG8SFmV4YW1wbGUua2FuYmFuLnRhc2sudjEivQEKBFRhc2sSFAoCaWQYASABKAlCCLpIBXIDsAEBEhgKBG5hbWUYAiABKAlCCrpIB3IFEAEYyAESFgoEZGVzYxgDIAEoCUIIukgFcgMYoB8SOAoGc3RhdHVzGAQgASgOMh4uZXhhbXBsZS5rYW5iYW4udGFzay52MS5TdGF0dXNCCLpIBYIBAhABEjMKCnRpbWVzdGFtcHMYBSABKAsyHy5jb21tb24ud2t0LnYxLlJlY29yZFRpbWVzdGFtcHMiRQoRQ3JlYXRlVGFza1JlcXVlc3QSGAoEbmFtZRgBIAEoCUIKukgHcgUQARjIARIWCgRkZXNjGAIgASgJQgi6SAVyAxigHyJIChJDcmVhdGVUYXNrUmVzcG9uc2USMgoEdGFzaxgBIAEoCzIcLmV4YW1wbGUua2FuYmFuLnRhc2sudjEuVGFza0IGukgDyAEBKk8KBlN0YXR1cxILCgdCQUNLTE9HEAASCQoFUkVBRFkQARIJCgVET0lORxACEgoKBlJFVklFVxADEggKBERPTkUQBBIMCghBUkNISVZFRBAFMnIKC1Rhc2tTZXJ2aWNlEmMKCkNyZWF0ZVRhc2sSKS5leGFtcGxlLmthbmJhbi50YXNrLnYxLkNyZWF0ZVRhc2tSZXF1ZXN0GiouZXhhbXBsZS5rYW5iYW4udGFzay52MS5DcmVhdGVUYXNrUmVzcG9uc2VCbwosY29tLmJldGFyZWR1Y2VkLnByb3RvLmV4YW1wbGUua2FuYmFuLnRhc2sudjFQAVo9Z2l0aHViLmNvbS9iZXRhcmVkdWNlZC9wcm90by9nby9leGFtcGxlL2thbmJhbi90YXNrL3YxO3Rhc2twYmIIZWRpdGlvbnNw6Ac", [file_buf_validate_validate, file_common_wkt_v1_record_timestamps]);
+  fileDesc("CiFleGFtcGxlL2thbmJhbi90YXNrL3YxL3Rhc2sucHJvdG8SFmV4YW1wbGUua2FuYmFuLnRhc2sudjEiHAoOR2V0VGFza1JlcXVlc3QSCgoCaWQYASABKAkiPQoPR2V0VGFza1Jlc3BvbnNlEioKBHRhc2sYASABKAsyHC5leGFtcGxlLmthbmJhbi50YXNrLnYxLlRhc2sivQEKBFRhc2sSFAoCaWQYASABKAlCCLpIBXIDsAEBEhgKBG5hbWUYAiABKAlCCrpIB3IFEAEYyAESFgoEZGVzYxgDIAEoCUIIukgFcgMYoB8SOAoGc3RhdHVzGAQgASgOMh4uZXhhbXBsZS5rYW5iYW4udGFzay52MS5TdGF0dXNCCLpIBYIBAhABEjMKCnRpbWVzdGFtcHMYBSABKAsyHy5jb21tb24ud2t0LnYxLlJlY29yZFRpbWVzdGFtcHMiRQoRQ3JlYXRlVGFza1JlcXVlc3QSGAoEbmFtZRgBIAEoCUIKukgHcgUQARjIARIWCgRkZXNjGAIgASgJQgi6SAVyAxigHyJIChJDcmVhdGVUYXNrUmVzcG9uc2USMgoEdGFzaxgBIAEoCzIcLmV4YW1wbGUua2FuYmFuLnRhc2sudjEuVGFza0IGukgDyAEBKk8KBlN0YXR1cxILCgdCQUNLTE9HEAASCQoFUkVBRFkQARIJCgVET0lORxACEgoKBlJFVklFVxADEggKBERPTkUQBBIMCghBUkNISVZFRBAFMs4BCgtUYXNrU2VydmljZRJjCgpDcmVhdGVUYXNrEikuZXhhbXBsZS5rYW5iYW4udGFzay52MS5DcmVhdGVUYXNrUmVxdWVzdBoqLmV4YW1wbGUua2FuYmFuLnRhc2sudjEuQ3JlYXRlVGFza1Jlc3BvbnNlEloKB0dldFRhc2sSJi5leGFtcGxlLmthbmJhbi50YXNrLnYxLkdldFRhc2tSZXF1ZXN0GicuZXhhbXBsZS5rYW5iYW4udGFzay52MS5HZXRUYXNrUmVzcG9uc2VCbwosY29tLmJldGFyZWR1Y2VkLnByb3RvLmV4YW1wbGUua2FuYmFuLnRhc2sudjFQAVo9Z2l0aHViLmNvbS9iZXRhcmVkdWNlZC9wcm90by9nby9leGFtcGxlL2thbmJhbi90YXNrL3YxO3Rhc2twYmIIZWRpdGlvbnNw6Ac", [file_buf_validate_validate, file_common_wkt_v1_record_timestamps]);
+
+/**
+ * @generated from message example.kanban.task.v1.GetTaskRequest
+ */
+export type GetTaskRequest = Message<"example.kanban.task.v1.GetTaskRequest"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * Describes the message example.kanban.task.v1.GetTaskRequest.
+ * Use `create(GetTaskRequestSchema)` to create a new message.
+ */
+export const GetTaskRequestSchema: GenMessage<GetTaskRequest> = /*@__PURE__*/
+  messageDesc(file_example_kanban_task_v1_task, 0);
+
+/**
+ * @generated from message example.kanban.task.v1.GetTaskResponse
+ */
+export type GetTaskResponse = Message<"example.kanban.task.v1.GetTaskResponse"> & {
+  /**
+   * @generated from field: example.kanban.task.v1.Task task = 1;
+   */
+  task?: Task;
+};
+
+/**
+ * Describes the message example.kanban.task.v1.GetTaskResponse.
+ * Use `create(GetTaskResponseSchema)` to create a new message.
+ */
+export const GetTaskResponseSchema: GenMessage<GetTaskResponse> = /*@__PURE__*/
+  messageDesc(file_example_kanban_task_v1_task, 1);
 
 /**
  * @generated from message example.kanban.task.v1.Task
@@ -50,7 +84,7 @@ export type Task = Message<"example.kanban.task.v1.Task"> & {
  * Use `create(TaskSchema)` to create a new message.
  */
 export const TaskSchema: GenMessage<Task> = /*@__PURE__*/
-  messageDesc(file_example_kanban_task_v1_task, 0);
+  messageDesc(file_example_kanban_task_v1_task, 2);
 
 /**
  * @generated from message example.kanban.task.v1.CreateTaskRequest
@@ -72,7 +106,7 @@ export type CreateTaskRequest = Message<"example.kanban.task.v1.CreateTaskReques
  * Use `create(CreateTaskRequestSchema)` to create a new message.
  */
 export const CreateTaskRequestSchema: GenMessage<CreateTaskRequest> = /*@__PURE__*/
-  messageDesc(file_example_kanban_task_v1_task, 1);
+  messageDesc(file_example_kanban_task_v1_task, 3);
 
 /**
  * @generated from message example.kanban.task.v1.CreateTaskResponse
@@ -89,7 +123,7 @@ export type CreateTaskResponse = Message<"example.kanban.task.v1.CreateTaskRespo
  * Use `create(CreateTaskResponseSchema)` to create a new message.
  */
 export const CreateTaskResponseSchema: GenMessage<CreateTaskResponse> = /*@__PURE__*/
-  messageDesc(file_example_kanban_task_v1_task, 2);
+  messageDesc(file_example_kanban_task_v1_task, 4);
 
 /**
  * @generated from enum example.kanban.task.v1.Status
@@ -143,6 +177,14 @@ export const TaskService: GenService<{
     methodKind: "unary";
     input: typeof CreateTaskRequestSchema;
     output: typeof CreateTaskResponseSchema;
+  },
+  /**
+   * @generated from rpc example.kanban.task.v1.TaskService.GetTask
+   */
+  getTask: {
+    methodKind: "unary";
+    input: typeof GetTaskRequestSchema;
+    output: typeof GetTaskResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_example_kanban_task_v1_task, 0);

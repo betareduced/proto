@@ -11,6 +11,7 @@ option java_package = "com.betareduced.proto.example.kanban.task.v1";
 
 service TaskService {
   rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse);
+  rpc GetTask(GetTaskRequest) returns (GetTaskResponse);
 }
 
 enum Status {
@@ -20,6 +21,14 @@ enum Status {
   REVIEW = 3;
   DONE = 4;
   ARCHIVED = 5;
+}
+
+message GetTaskRequest {
+  string id = 1;
+}
+
+message GetTaskResponse {
+  Task task = 1;
 }
 
 message Task {
